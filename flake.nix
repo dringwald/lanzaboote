@@ -181,7 +181,7 @@
             # tell lanzatool where to find our UEFI binaries.
             makeWrapper ${tool}/bin/lzbt-systemd $out/bin/lzbt \
               --set PATH ${lib.makeBinPath [ pkgs.binutils-unwrapped pkgs.sbsigntool ]} \
-              --set LANZABOOTE_STUB ${stub}/bin/lanzaboote_stub.efi
+              --set LANZABOOTE_STUB ${fatStub}/bin/lanzaboote_stub.efi
           '';
         in
         {
